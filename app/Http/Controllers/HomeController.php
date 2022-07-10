@@ -10,11 +10,15 @@ class HomeController extends Controller
         return view('layouts.index');
     }
 
-    public function store(){
-        return view('layouts.store');
+    public function home(){
+        return view('layouts.home');
     }
 
     public function about(){
         return view('layouts.about');
+    }
+
+    public function contact(){
+        return view('layouts.contact');
     }
 }
