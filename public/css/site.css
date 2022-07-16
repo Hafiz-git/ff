@@ -10,3 +10,19 @@ body {
 nav a {
     padding: 10px;
 }
+
+.border-1 {
+    border-width: .07rem;
+}
+
+.form div {
+    margin-bottom: 15px;
+}
+
+.form div>input {
+    display: black;
+}
+
+.form div>button {
+    padding: 5px;
+}

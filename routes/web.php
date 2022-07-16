@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GuitarController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -14,9 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [HomeController::class, 'home']);
-Route::get('/about', [HomeController::class, 'about']);
-Route::get('/contact', [HomeController::class, 'contact']);
+Route::get('/', [HomeController::class, 'home'])->name('home.index');
+Route::get('/about/kuku', [HomeController::class, 'about'])->name('home.about');
+Route::get('/contact', [HomeController::class, 'contact'])->name('home.contact');
+
+Route::resource('guitars', GuitarController::class);
 
 Route::get('/store/{kategori?}/{item?}/{kedai?}', function($kategori=null, $item=null, $kedai=null) {
     $kategori = request("kategori");
